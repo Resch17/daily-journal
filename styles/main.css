@@ -1,19 +1,85 @@
-@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
+/* variables, resets, element styling */
 
-/*Typography
---------------------------------------------------------------*/
-body,
-button,
-input,
-select,
-textarea {
-	color: #404040;
-	font-family: "Comfortaa", Arial, sans-serif;
-	font-size: 14px;
+:root {
+	--body-font: 'Rubik', sans-serif;
+	--heading-font: 'Abril Fatface', cursive;
+	--text-color: #000;
+	--edit-color: #FFC107;
+	--delete-color: #DC3545;
+	--success-color:#28A745;
+	--primary-color: #007BFF;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: var(--body-font);
 	line-height: 1.5;
 }
 
-h1,h2,h3,h4,h5,h6 {
-  font-family: "Patua One", serif;
-  letter-spacing: 2px;
+a {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--heading-font);
+}
+
+/* utility classes */
+
+.btn {
+	background-color: #333;
+	padding: 4px 3px;
+	border-radius: 0.5em;
+	color: #fff;
+}
+
+.btn--edit {
+	background-color: var(--edit-color);
+	color: #000;
+}
+
+.btn--delete {
+	background-color: var(--delete-color);
+	color: #fff;
+}
+
+.btn--primary {
+	background-color: var(--primary-color);
+	color: #fff;
+}
+
+/* modal styling */
+.modal {
+	display: none;
+}
+
+/* header styling */
+.header {
+	background-color: coral;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100px;
+	margin-bottom: 1em;
+}
+
+.logo {
+	margin-left: 1em;
+}
+
+.logo img {
+	width: 150px;
+}
+
+.title {
+	width: 500px;
+	margin-left: 1em;
+	text-align: center;
+}
+
+.title h1 {
+	font-size: 40px;
 }
