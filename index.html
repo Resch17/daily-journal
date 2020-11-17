@@ -4,14 +4,62 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Journal | Aaron Resch</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/main.css">
   </head>
 
   <body>
-    <main id="container">
-
+    <header class="header">
+      <div class="logo">
+        <img src="./images/logo200.png" alt="Daily Journal">
+      </div>
+      <div class="title">
+        <h1>Aaron Resch</h1>
+      </div>
+    </header>
+    <aside class="modal">
+      <div class="modal__top-line">
+        <label for="date">Entry Date:</label>
+        <input type="date" name="date" id="date">
+        <label for="concepts-covered">Concepts covered:</label>
+        <input type="text" name="concepts-covered" id="conceptsCovered">
+        <label for="moods">Select a mood:</label>
+        <select name="moods" id="moods">
+          <option value="Enthusiastic">Enthusiastic</option>
+          <option value="Sweaty">Sweaty</option>
+          <option value="Terrified">Terrified</option>
+        </select>
+      </div>
+      <textarea name="journal-entry" id="journalEntryText" cols="30" rows="10"></textarea>
+      <a href="#" class="btn btn--success record-entry">Record Journal Entry</a>
+    </aside>
+    <main class="container">
+      <a class="btn btn--primary new-entry" id="newEntry" href="#">New Entry</a>
+      <section class="journal-entries" id="journalEntries">
+        <section class="entry">
+          <div class="entry__top-line">
+            <p class="date"></p>
+            <p class="mood"></p>
+            <p class="topics"></p>
+          </div>
+          <div class="entry__content">
+            <p class="content"></p>
+          </div>
+          <div class="entry__bottom-line">
+            <a href="#" class="btn btn--edit">Edit</a>
+            <a href="#" class="btn btn--delete">Delete</a>
+          </div>
+        </section>
+      </section>
     </main>
-
+    <footer class="footer">
+      <div class="footer__name">Aaron Resch</div>
+      <div class="footer__link">
+        <a href="https://github.com/Resch17/" target="_blank">Github Link</a>
+      </div>
+      <div class="footer__copyright">&copy; 2020</div>
+    </footer>
     <script type="module" src="./scripts/main.js"></script>
   </body>
 </html>
