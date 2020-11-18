@@ -31,9 +31,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn {
 	background-color: #333;
-	padding: 4px 3px;
+	padding: 4px 1em;
 	border-radius: 0.5em;
-	color: #fff;
+	color: #fff;	
+	display: inline-block;
+	filter: none;
+	transition: filter .25s ease-in;
+}
+
+.btn:hover {
+	filter: grayscale();
+	transition: filter .25s ease-in;
 }
 
 .btn--edit {
@@ -51,6 +59,10 @@ h1, h2, h3, h4, h5, h6 {
 	color: #fff;
 }
 
+.bold {
+	font-weight: bold;
+}
+
 /* modal styling */
 .modal {
 	display: none;
@@ -58,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* header styling */
 .header {
-	background-color: coral;
+	background-color: var(--primary-color);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -82,4 +94,65 @@ h1, h2, h3, h4, h5, h6 {
 
 .title h1 {
 	font-size: 40px;
+}
+
+/* main container styling */
+.container {
+	width: 95%;
+	margin: 0 auto 2em;
+	text-align: center;
+}
+
+.new-entry {
+	width: 20em;
+}
+
+/* journal entry styling */
+.journal-entries {
+	margin-top: 1em;
+	background-color: #aaa;
+	padding: 0.5em 0;
+}
+
+.entry {
+	width: 95%;
+	border-top: 2px solid black;
+	margin: 1em auto;
+	padding-top: 0.5em;
+}
+
+.entry:first-of-type {
+	border-top: none;
+}
+
+.entry__top-line {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 0.5em;
+}
+
+.entry__top-line__stack {
+	text-align: left;
+}
+
+.entry__content {
+	background-color: #ffffff77;
+	border-radius: 8px;
+	padding: 0.5em;
+	text-align: left;
+	margin-bottom: 1em;;
+}
+
+.entry__bottom-line {
+	/* border: 2px solid lime; */
+	display: flex;
+	justify-content: space-between;
+	width: 95%;
+	margin: 0 auto;
+}
+
+/* footer styling */
+.footer {
+	border-top: 2px solid black;
 }

@@ -36,22 +36,40 @@
     </aside>
     <main class="container">
       <a class="btn btn--primary new-entry" id="newEntry" href="#">New Entry</a>
-      <section class="journal-entries" id="journalEntries">
+      <article class="journal-entries" id="journalEntries">        
         <section class="entry">
           <div class="entry__top-line">
-            <p class="date"></p>
-            <p class="mood"></p>
-            <p class="topics"></p>
+            <div class="entry__top-line__stack">
+              <p class="date"><span class="bold">Date: </span>11/17/2020</p>
+              <p class="mood"><span class="bold">Mood: </span>Hungry</p>
+            </div>
+            <p class="topics"><span class="bold">Topics covered: </span>CSS Transitions, jQuery, JavaScript async</p>
           </div>
           <div class="entry__content">
-            <p class="content"></p>
+            <p class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam numquam at, deleniti vel illum beatae libero deserunt repellat consectetur cupiditate eum fuga id obcaecati ipsa sequi repudiandae. Inventore, praesentium in! Ad nisi fugit aliquid, dolores dolor placeat? Eaque, amet eos?</p>
           </div>
           <div class="entry__bottom-line">
             <a href="#" class="btn btn--edit">Edit</a>
             <a href="#" class="btn btn--delete">Delete</a>
           </div>
         </section>
-      </section>
+        <section class="entry">
+          <div class="entry__top-line">
+            <div class="entry__top-line__stack">
+              <p class="date"><span class="bold">Date: </span>11/17/2020</p>
+              <p class="mood"><span class="bold">Mood: </span>Hungry</p>
+            </div>
+            <p class="topics"><span class="bold">Topics covered: </span>CSS Transitions, jQuery, JavaScript async</p>
+          </div>
+          <div class="entry__content">
+            <p class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam numquam at, deleniti vel illum beatae libero deserunt repellat consectetur cupiditate eum fuga id obcaecati ipsa sequi repudiandae. Inventore, praesentium in! Ad nisi fugit aliquid, dolores dolor placeat? Eaque, amet eos?</p>
+          </div>
+          <div class="entry__bottom-line">
+            <a href="#" class="btn btn--edit">Edit</a>
+            <a href="#" class="btn btn--delete">Delete</a>
+          </div>
+        </section>
+      </article>
     </main>
     <footer class="footer">
       <div class="footer__name">Aaron Resch</div>
