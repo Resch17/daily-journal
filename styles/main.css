@@ -7,7 +7,9 @@
 	--edit-color: #dd9866;
 	--delete-color: #8f384d;
 	--success-color:#28A745;
-	--primary-color: #3b4861;
+	--primary-color: #5C6E91;
+	--darker-color: #3b4861;
+
 }
 
 * {
@@ -58,8 +60,8 @@ body {
 	color: #fff;
 }
 
-.btn--primary {
-	background-color: var(--primary-color);
+.btn--new {
+	background-color: var(--darker-color);
 	color: #fff;
 }
 
@@ -70,11 +72,63 @@ body {
 /* modal styling */
 .modal {
 	display: none;
+	position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.65);
 }
+
+.modal-content {
+	background-color: #ddd;
+	margin: 20% auto;
+	width: 90%;
+	box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2);
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+	border-radius: 1em;
+}
+
+.modal__top-line {
+	margin: 0 auto 0.5em;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.modal__top-line a {
+	align-self: flex-start;
+}
+
+.modal__top-line__stack {
+	display: flex;
+	flex-direction: column;
+}
+
+input#conceptsCovered {
+	width: 20em;
+}
+
+textarea#journalEntryText {
+	margin-bottom: 0.5em;
+}
+
+.record-entry {
+	text-align: center;
+	width: 15em;
+	margin: 0 auto;
+}
+
+
 
 /* header styling */
 .header {
-	background-color: #8f384d;
+	background-color: var(--delete-color);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -116,7 +170,7 @@ body {
 /* journal entry styling */
 .journal-entries {
 	margin-top: 1em;
-	background-color: #5C6E91;
+	background-color: var(--primary-color);
 	padding: 0.5em 0;
 	border-radius: 10px;
 	color: #fff;
@@ -168,13 +222,17 @@ body {
 	display: flex;
 	justify-content: space-between;
 	/* border-top: 2px solid black; */
-	background-color: #8f384d;
-	box-shadow: 0 50vh 0 50vh #8f384d;
+	background-color: var(--delete-color);
+	box-shadow: 0 50vh 0 50vh var(--delete-color);
 	color: #ddd;
-	margin: 14em 1em 0;
+	margin: 10em 1em 0;
 	padding-top: 0.5em;
 }
 
 .footer a {
 	color: #ddd;
+}
+
+.footer a:hover {
+	color: #888;	
 }
