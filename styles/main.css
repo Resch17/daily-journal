@@ -114,12 +114,17 @@ body {
 	flex-direction: column;
 }
 
+.modal__top-line input {
+	padding-left: 0.5em;
+}
+
 input#conceptsCovered {
 	width: 20em;
 }
 
 textarea#journalEntryText {
 	margin-bottom: 0.5em;
+	padding: 1em;
 }
 
 .record-entry {
