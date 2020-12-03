@@ -1,5 +1,7 @@
-import {ModalDisplay} from "./modal.js"
-import {EntryList} from "./entryList.js"
+import { ModalDisplay } from "./modal.js";
+import { EntryList } from "./entryList.js";
+import { JournalForm } from "./JournalForm.js";
 
-ModalDisplay();
+JournalForm();
 EntryList();
+ModalDisplay();

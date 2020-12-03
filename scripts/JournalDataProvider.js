@@ -1,44 +1,39 @@
-/*
- *   Journal data provider for Daily Journal application
- *
- *      Holds the raw data about each entry and exports
- *      functions that other modules can use to filter
- *      the entries for different purposes.
- */
+import { EntryList } from "./entryList.js";
 
-// This is the original data.
-const journal = [
-  {
-      id: 1,
-      date: "07/24/2025",
-      concept: "HTML & CSS",
-      entry: "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-      mood: "Enthusiastic"
-  },
-  {
-      id: 2,
-      date: "07/25/2025",
-      concept: "HTML & JS",
-      entry: "We learned about inserting HTML into the DOM with JS",
-      mood: "Terrified"
-  },
-  {
-      id: 3,
-      date: "07/27/2025",
-      concept: "JS",
-      entry: "Nothing but nested For loops, all day.",
-      mood: "Sweaty"
-  }
-];
+let journal = [];
 
-/*
-  You export a function that provides a version of the
-  raw data in the format that you want
-*/
+const eventHub = document.getElementsByTagName("body");
+
+const dispatchStateChangeEvent = () => {
+  eventHub.dispatchEvent(new CustomEvent("journalStateChanged"))
+}
+
+export const getEntries = () => {
+  return fetch("http://localhost:8088/entries")
+    .then(res=>res.json())
+    .then((entries)=>{
+      journal = entries
+    })
+}
+
+export const saveJournalEntry = (entry) => {
+  return fetch("http://localhost:8088/entries", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(entry),
+  })
+    .then(EntryList())
+    .then(dispatchStateChangeEvent)   
+
+}
+
+
 export const useJournalEntries = () => {
   const sortedByDate = journal.sort(
       (currentEntry, nextEntry) =>
           Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
   );
-  return sortedByDate;
+  return sortedByDate.slice();
 };

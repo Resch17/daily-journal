@@ -1,0 +1,25 @@
+{
+  "entries": [
+    {
+      "id": 1,
+      "date": "2020-11-10",
+      "concept": "HTML & CSS",
+      "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+      "mood": "Enthusiastic"
+    },
+    {
+      "id": 2,
+      "date": "2020-12-01",
+      "concept": "HTML & JS",
+      "entry": "We learned about inserting HTML into the DOM with JS",
+      "mood": "Terrified"
+    },
+    {
+      "id": 3,
+      "date": "2020-12-02",
+      "concept": "JS",
+      "entry": "Nothing but nested For loops, all day.",
+      "mood": "Sweaty"
+    }
+  ]
+}
