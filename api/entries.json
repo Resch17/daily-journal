@@ -20,6 +20,13 @@
       "concept": "JS",
       "entry": "Nothing but nested For loops, all day.",
       "mood": "Sweaty"
+    },
+    {
+      "date": "2020-12-04",
+      "concept": "Decoupling",
+      "entry": "WTF I DON'T GET THIS AT ALL",
+      "mood": "Sweaty",
+      "id": 4
     }
   ]
 }
