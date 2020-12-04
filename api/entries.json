@@ -1,32 +1,18 @@
 {
   "entries": [
     {
-      "id": 1,
-      "date": "2020-11-10",
-      "concept": "HTML & CSS",
-      "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-      "mood": "Enthusiastic"
-    },
-    {
-      "id": 2,
-      "date": "2020-12-01",
-      "concept": "HTML & JS",
-      "entry": "We learned about inserting HTML into the DOM with JS",
-      "mood": "Terrified"
-    },
-    {
-      "id": 3,
-      "date": "2020-12-02",
+      "date": "2020-11-11",
       "concept": "JS",
-      "entry": "Nothing but nested For loops, all day.",
-      "mood": "Sweaty"
+      "entry": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
+      "mood": "Enthusiastic",
+      "id": 1
     },
     {
-      "date": "2020-12-04",
-      "concept": "Decoupling",
-      "entry": "WTF I DON'T GET THIS AT ALL",
+      "date": "2020-12-01",
+      "concept": "Lorem ipsum ",
+      "entry": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
       "mood": "Sweaty",
-      "id": 4
+      "id": 2
     }
   ]
 }

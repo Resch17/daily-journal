@@ -52,3 +52,21 @@ document.addEventListener("click", (clickEvent) => {
     }
   }
 });
+
+export const deleteSelection = () => {
+  document.addEventListener("click", (clickEvent)=> {
+    if (clickEvent.target.id.startsWith("delete")) {
+      const idToDelete = clickEvent.target.id;
+      const [prefix, deleteItem] = idToDelete.split("--");
+
+      const customEvent = new CustomEvent("deleteThisEntry", {
+        detail: {
+          deleteItem: deleteItem
+        }
+      })
+      document.dispatchEvent(customEvent);
+    }
+
+  })
+
+}

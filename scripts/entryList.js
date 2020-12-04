@@ -11,4 +11,7 @@ export const EntryList = () => {
       contentElement.innerHTML += entryHTML;
     }
   });
+
+  
 };
+
