@@ -227,6 +227,10 @@ textarea#journalEntryText {
 	/* color: #000; */
 }
 
+.content {
+	word-wrap: break-word;
+}
+
 .entry__bottom-line {
 	/* border: 2px solid lime; */
 	display: flex;

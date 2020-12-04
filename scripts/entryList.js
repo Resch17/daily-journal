@@ -6,12 +6,14 @@ export const EntryList = () => {
     const contentElement = document.querySelector("#journalEntries");
     const entryArray = useJournalEntries();
 
-    for (const entry of entryArray) {
-      const entryHTML = Entry(entry);
-      contentElement.innerHTML += entryHTML;
+    // for (const entry of entryArray) {
+    //   const entryHTML = Entry(entry);
+    //   contentElement.innerHTML += entryHTML;
+    // }
+    if (entryArray.length > 0) {
+      contentElement.innerHTML = entryArray
+        .map((entry) => `${Entry(entry)}`)
+        .join("");
     }
   });
-
-  
 };
-
