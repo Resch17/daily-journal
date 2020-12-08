@@ -33,6 +33,13 @@ body {
 	background-color: #a8b2c5;
 }
 
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
 /* utility classes */
 
 .btn {
@@ -176,6 +183,18 @@ textarea#journalEntryText {
 	width: 20em;
 }
 
+/* filter bar styling */
+
+.fieldset {
+	display: flex;
+	justify-content: center;
+	margin-top: 1em;
+}
+
+.fieldset div {
+	margin-right: 1em;
+}
+
 /* journal entry styling */
 .journal-entries {
 	margin-top: 1em;
@@ -218,6 +237,10 @@ textarea#journalEntryText {
 	text-align: left;
 	margin-bottom: 1em;;
 	/* color: #000; */
+}
+
+.content {
+	word-wrap: break-word;
 }
 
 .entry__bottom-line {

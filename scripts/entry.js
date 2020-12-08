@@ -12,8 +12,8 @@ export const Entry = (entry) => {
     <p class="content">${entry.entry}</p>
   </div>
   <div class="entry__bottom-line">
-    <a href="#" class="btn btn--edit">Edit</a>
-    <a href="#" class="btn btn--delete">Delete</a>
+    <a href="#" class="btn btn--edit" id="edit--${entry.id}">Edit</a>
+    <a href="#" class="btn btn--delete" id="delete--${entry.id}">Delete</a>
   </div>
 </section>
   `
