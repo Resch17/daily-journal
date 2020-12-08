@@ -1,15 +1,13 @@
-import { EntryList } from "./entryList.js";
-
 let journal = [];
 
-const eventHub = document.getElementsByTagName("body");
+const eventHub = document.querySelector('.container');
 
 const dispatchStateChangeEvent = () => {
-  eventHub.dispatchEvent(new CustomEvent("journalStateChanged"));
+  eventHub.dispatchEvent(new CustomEvent('journalStateChanged'));
 };
 
 export const getEntries = () => {
-  return fetch("http://localhost:8088/entries")
+  return fetch('http://localhost:8088/entries')
     .then((res) => res.json())
     .then((entries) => {
       journal = entries;
@@ -17,14 +15,14 @@ export const getEntries = () => {
 };
 
 export const saveJournalEntry = (entry) => {
-  return fetch("http://localhost:8088/entries", {
-    method: "POST",
+  return fetch('http://localhost:8088/entries', {
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify(entry),
   })
-    .then(EntryList())
+    .then(getEntries)
     .then(dispatchStateChangeEvent);
 };
 
@@ -37,11 +35,25 @@ export const useJournalEntries = () => {
 };
 
 export const deleteJournalEntry = () => {
-  document.addEventListener("deleteThisEntry", (event) => {
+  document.addEventListener('deleteThisEntry', (event) => {
     if (event.detail.deleteItem !== 0) {
       return fetch(`http://localhost:8088/entries/${event.detail.deleteItem}`, {
-        method: "DELETE",
-      }).then(getEntries());
+        method: 'DELETE',
+      })
+        .then(getEntries)
+        .then(dispatchStateChangeEvent);
     }
   });
+};
+
+export const editJournalEntry = (entry) => {
+  return fetch(`http://localhost:8088/entries/${entry.id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(entry),
+  })
+    .then(getEntries)
+    .then(dispatchStateChangeEvent);
 };

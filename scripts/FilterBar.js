@@ -15,18 +15,18 @@ export const FilterBar = () => {
 
 contentTarget.addEventListener("change", (changeEvent) => {
   if (changeEvent.target.name === "moodFilter") {
+    let customEvent
     if (changeEvent.target.id === "moodEnthusiastic") {
-      const customEvent = new CustomEvent("enthusiasticChosen");
-      eventHub.dispatchEvent(customEvent);
+      customEvent = new CustomEvent("enthusiasticChosen");
     } else if (changeEvent.target.id === "moodSweaty") {
-      const customEvent = new CustomEvent("sweatyChosen");
-      eventHub.dispatchEvent(customEvent);
+      customEvent = new CustomEvent("sweatyChosen");
     } else if (changeEvent.target.id === "moodTerrified") {
-      const customEvent = new CustomEvent("terrifiedChosen");
-      eventHub.dispatchEvent(customEvent);
+      customEvent = new CustomEvent("terrifiedChosen");
     } else if (changeEvent.target.id === "allMoods") {
-      const customEvent = new CustomEvent("allMoodsChosen");
-      eventHub.dispatchEvent(customEvent);
+      customEvent = new CustomEvent("allMoodsChosen");
     }
+    eventHub.dispatchEvent(customEvent);
   }
 });
+
+FilterBar();
