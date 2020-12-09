@@ -23,11 +23,11 @@ const render = () => {
     </div>
     <div>
       <label for="concepts-covered">Concepts covered:</label>
-      <input type="text" name="concepts-covered" id="conceptsCovered">
+      <input type="text" name="concepts-covered" id="conceptsCovered" autocomplete="off">
     </div>
   </div>
   <textarea name="journal-entry" id="journalEntryText" cols="30" rows="10"></textarea>
-  <a href="#" class="btn btn--success record-entry">Record Journal Entry</a>
+  <div class="btn btn--success record-entry">Record Journal Entry</div>
 </section>
   `;
 };

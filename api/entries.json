@@ -1,25 +1,18 @@
 {
   "entries": [
     {
-      "date": "2020-12-20",
-      "concept": "NOTHING",
-      "entry": "TEST",
-      "mood": "Terrified",
-      "id": 3
-    },
-    {
-      "date": "2020-12-08",
-      "concept": "SWEAT",
-      "entry": "TEST TEST TEST TEST TEST TEST TEST ",
-      "mood": "Sweaty",
-      "id": 5
-    },
-    {
       "date": "2020-12-08",
       "concept": "PUT/POST/DELETE",
       "entry": "Fetch calls coming together, lookin' good. Edits, too.",
       "mood": "Enthusiastic",
       "id": 6
+    },
+    {
+      "date": "2020-12-09",
+      "concept": "Databases",
+      "entry": "Started diving into data relationships. Got glassdale working, but still not sure I fully understand the abstract thinking.",
+      "mood": "Sweaty",
+      "id": 8
     }
   ]
 }
